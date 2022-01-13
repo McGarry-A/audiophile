@@ -16,16 +16,16 @@ const App = () => (
       <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
-            <NavLink to="/">Home</NavLink>
+            <NavLink className="nav-list-item" to="/">Home</NavLink>
           </li>
           <li className="nav-list-item">
-            <NavLink to="/headphones">Headphones</NavLink>
+            <NavLink className="nav-list-item" to="/headphones">Headphones</NavLink>
           </li>
           <li className="nav-list-item">
-            <NavLink to="/speakers">Speakers</NavLink>
+            <NavLink className="nav-list-item" to="/speakers">Speakers</NavLink>
           </li>
           <li className="nav-list-item">
-            <NavLink to="/earphones">Earphones</NavLink>
+            <NavLink className="nav-list-item" to="/earphones">Earphones</NavLink>
           </li>
         </ul>
       </nav>
@@ -35,9 +35,9 @@ const App = () => (
     </div>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/headphones" element={<ProductSection product={product}/>} />
+      {/* <Route path="/headphones" element={<ProductSection product={product}/>} />
       <Route path="/speakers" element={<ProductSection product={product}/>} />
-      <Route path="/earphones" element={<ProductSection product={product}/>} />
+      <Route path="/earphones" element={<ProductSection product={product}/>} /> */}
     </Routes>
   </>
 );
