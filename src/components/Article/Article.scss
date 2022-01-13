@@ -1,0 +1,45 @@
+@import "../../styles/styles";
+
+.article {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    .article-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10em 3em;
+
+        h2 {
+            @extend %sub-heading;
+            width: 70%;
+            margin-bottom: 40px;
+
+            .article-span {
+                color: $primary-brownish-orange;
+            }
+        }
+
+        p {
+            opacity: 50%;
+            line-height: 28px;
+            font-size: 18px;
+            width: 95%;
+            letter-spacing: 1.5px;
+        }
+    }
+    .article-right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 100%;
+            margin-left: 1rem;
+            border-radius: 10px;
+        }
+    }
+
+}

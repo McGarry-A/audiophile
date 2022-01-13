@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.article .article-left h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.article .article-left h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+
+.article .article-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10em 3em;
+}
+
+.article .article-left h2 {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.article .article-left h2 .article-span {
+  color: #d87d4a;
+}
+
+.article .article-left p {
+  opacity: 50%;
+  line-height: 28px;
+  font-size: 18px;
+  width: 95%;
+  letter-spacing: 1.5px;
+}
+
+.article .article-right {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.article .article-right img {
+  width: 100%;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=Article.css.map */
