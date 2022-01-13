@@ -1,0 +1,33 @@
+@import "../../styles/styles";
+
+.navbar {
+    background-color: $primary-black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 4em;
+    border-bottom: $primary-grey;
+
+    nav {
+        .nav-list {
+            list-style: none;
+            display: flex;
+            margin-left: -2em;
+
+            .nav-list-item {
+                margin: 0 1em;
+                cursor: pointer;
+                @extend %fourth-heading;
+                font-size: 12px;
+                letter-spacing: 1.6px;
+            }
+        }
+    }
+
+    .cart-container {
+        .cart {
+            cursor: pointer;
+        }
+    }
+}

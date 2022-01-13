@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.banner-short .banner-short-left h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.banner-short .banner-short-left h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+.banner-short {
+  width: 90%;
+  height: 320px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.banner-short .banner-short-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 10rem;
+}
+
+.banner-short .banner-short-left h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.banner-short .banner-short-left button {
+  text-transform: uppercase;
+  padding: 0.8em 1.8em;
+  border: none;
+  color: white;
+  background-color: #d87d4a;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  font-weight: 600;
+}
+
+.banner-short .banner-short-left button:hover {
+  background-color: #fbaf85;
+}
+
+.banner-short .banner-short-right .banner-right-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+}
+/*# sourceMappingURL=BannerShort.css.map */
