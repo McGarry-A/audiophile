@@ -1,4 +1,5 @@
 import YX1 from "../../images/home/desktop/image-earphones-yx1.jpg";
+import "./BannerSplit.css"
 
 const BannerSplit: React.FC = () => {
   return (
