@@ -2,9 +2,12 @@
 
 body {
   font-family:"Manrope", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: auto;
 }
 
 html {
-  max-width: 1440px;
+  
   margin: 0 auto;
 }

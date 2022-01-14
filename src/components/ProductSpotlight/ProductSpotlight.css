@@ -32,6 +32,7 @@
   display: -ms-flexbox;
   display: flex;
   padding: 4em 0em;
+  width: 100%;
 }
 
 .product-spotlight .product-spotlight-col-1 {

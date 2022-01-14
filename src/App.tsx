@@ -7,6 +7,8 @@ import Home from "./screens/Home/Home";
 import "./components/Navbar/Navbar.css";
 import { data } from "./data";
 import ProductSection from "./screens/ProductSection/ProductSection";
+import ProductDetails from "./screens/ProductDetails/ProductDetails";
+
 // import ProductSection from "./screens/ProductSection/ProductSection";
 
 const App = () => (
@@ -45,19 +47,17 @@ const App = () => (
     </div>
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/headphones" element={<ProductSection data={product}/>} />
-      <Route path="/speakers" element={<ProductSection data={product}/>} />
-      <Route path="/earphones" element={<ProductSection data={product}/>} /> */}
 
       {data.map((el, index) => {
         return (
           <Route
             path={`/${el.name}`}
             key={index}
-            element={<ProductSection data={el.products} index={index} title={el.name} />}
+            element={<ProductSection data={el.products} title={el.name} />}
           />
         );
       })}
+      <Route path={`/item/:id`} element={<ProductDetails />} />
     </Routes>
   </>
 );

@@ -8,10 +8,9 @@ import Footer from "../../components/Footer/Footer";
 
 interface props {
   data: ProductsInterface[];
-  index: number;
   title: string;
 }
-const ProductSection: React.FC<props> = ({ data, index, title }) => {
+const ProductSection: React.FC<props> = ({ data, title }) => {
   return (
     <>
       <ProductSectionBanner title={title} />

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,6FAAI;ADEZ,AAAA,mBAAmB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;CAUd;;AAZD,AAQI,mBARe,CAQf,eAAe,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACzB",
+    "sources": [
+        "Features.scss",
+        "../../styles/styles.scss"
+    ],
+    "names": [],
+    "file": "Features.css"
+}

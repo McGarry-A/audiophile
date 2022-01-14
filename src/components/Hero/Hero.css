@@ -16,7 +16,7 @@
 
 .hero .hero-left .hero-text {
   font-family: "Manrope", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 15px;
   line-height: 25px;
 }
@@ -28,6 +28,7 @@
   color: white;
   padding: 10em 0;
   background-color: #191919;
+  height: 93vh;
 }
 
 .hero .hero-left {
