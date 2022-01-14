@@ -1,15 +1,12 @@
-import React from "react";
 import "./App.css";
+import "./components/Navbar/Navbar.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { ReactComponent as Logo } from "./images/shared/desktop/logo.svg";
 import { ReactComponent as Cart } from "./images/shared/desktop/icon-cart.svg";
-import Home from "./screens/Home/Home";
-import "./components/Navbar/Navbar.css";
 import { data } from "./data";
+import Home from "./screens/Home/Home";
 import ProductSection from "./screens/ProductSection/ProductSection";
 import ProductDetails from "./screens/ProductDetails/ProductDetails";
-
-// import ProductSection from "./screens/ProductSection/ProductSection";
 
 const App = () => (
   <>
@@ -47,7 +44,6 @@ const App = () => (
     </div>
     <Routes>
       <Route path="/" element={<Home />} />
-
       {data.map((el, index) => {
         return (
           <Route

@@ -20,7 +20,7 @@
   letter-spacing: 1.3px;
 }
 
-.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container p {
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-description, .product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-actions-container .product-spotlight-price {
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -64,14 +64,14 @@
   width: 100%;
 }
 
-.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container p {
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-description {
   margin-bottom: 30px;
   font-size: 18px;
   width: 100%;
   opacity: 50%;
 }
 
-.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container button {
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .see-product-button {
   text-transform: uppercase;
   padding: 0.8em 1.8em;
   border: none;
@@ -83,7 +83,36 @@
   cursor: pointer;
 }
 
-.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container button:hover {
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .see-product-button:hover {
+  background-color: #fbaf85;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-actions-container .product-spotlight-price {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-actions-container .product-spotlight-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-actions-container .product-spotlight-actions .product-spotlight-atc {
+  text-transform: uppercase;
+  padding: 0.8em 1.8em;
+  border: none;
+  color: white;
+  background-color: #d87d4a;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container .product-spotlight-actions-container .product-spotlight-actions .product-spotlight-atc:hover {
   background-color: #fbaf85;
 }
 

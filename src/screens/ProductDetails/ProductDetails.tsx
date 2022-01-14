@@ -8,7 +8,6 @@ import ProductSpotlight from "../../components/ProductSpotlight/ProductSpotlight
 import { useParams } from "react-router-dom";
 import { data, ProductsInterface, SectionInterface } from "../../data";
 import { useEffect, useState } from "react";
-import { DatabaseError } from "sequelize/types";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -55,8 +54,8 @@ const ProductDetails = () => {
 
   return (
     <>
-      {item && <ProductSpotlight product={item} />}
-      <Features />
+      {item && <ProductSpotlight product={item} buy={true} />}
+      {item && <Features product={item}/>}
       <ImageGallery />
       {/* YOU MAY ALSO LIKE */}
       <Categories />

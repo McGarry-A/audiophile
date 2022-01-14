@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.features-container .features-col-1 .features-col-1-text h2, .features-container .features-col-2 .features-col-2-header h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.features-container .features-col-1 .features-col-1-text p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+}
+
 .features-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,7 +22,29 @@
   width: 100%;
 }
 
+.features-container .features-col-1 {
+  width: 100%;
+}
+
+.features-container .features-col-1 .features-col-1-text {
+  width: 100%;
+  margin: auto;
+}
+
+.features-container .features-col-1 .features-col-1-text h2 {
+  padding-bottom: 20px;
+  font-size: 32px;
+}
+
+.features-container .features-col-1 .features-col-1-text p {
+  padding-bottom: 20px;
+  font-size: 16px;
+  opacity: 70%;
+  letter-spacing: 1.25px;
+}
+
 .features-container .features-col-2 {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,5 +52,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.features-container .features-col-2 .features-col-2-header h2 {
+  padding-bottom: 20px;
+  font-size: 32px;
+  padding-left: 10%;
+}
+
+.features-container .features-col-2 .features-col-2-list {
+  padding-left: 12%;
+}
+
+.features-container .features-col-2 .features-col-2-list ul li {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=Features.css.map */

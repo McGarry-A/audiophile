@@ -15,7 +15,7 @@ const ProductSection: React.FC<props> = ({ data, title }) => {
     <>
       <ProductSectionBanner title={title} />
       {data.map((el, index) => {
-        return <ProductSpotlight key={index} product={el} index={index} />;
+        return <ProductSpotlight key={index} product={el} index={index} buy={false}/>;
       })}
       <Categories />
       <Article />

@@ -26,7 +26,7 @@
         width: 100%;
       }
 
-      p {
+      .product-spotlight-description {
         @extend %text-body;
         margin-bottom: 30px;
         font-size: 18px;
@@ -34,8 +34,26 @@
         opacity: 50%;
       }
 
-      button {
+      .see-product-button {
         @include button-one;
+      }
+
+      .product-spotlight-actions-container {
+          .product-spotlight-price {
+              @extend %text-body;
+              font-weight: $font-extra-bold;
+              font-size: 18px;
+              margin-bottom: 20px;
+          }
+
+          .product-spotlight-actions {
+              display: flex;
+
+              .product-spotlight-atc {
+                  @include button-one;
+                  margin-left: 20px;
+              }
+          }
       }
     }
   }

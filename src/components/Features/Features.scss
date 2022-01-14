@@ -1,15 +1,55 @@
 @import "../../styles/styles";
 
 .features-container {
-    display: flex;
+  display: flex;
+  width: 100%;
+
+  .features-col-1 {
     width: 100%;
 
-    .features-col-1 {
-        
+    .features-col-1-text {
+      width: 100%;
+      margin: auto;
+
+      h2 {
+        padding-bottom: 20px;
+        @extend %main-heading;
+        font-size: 32px;
+      }
+
+      p {
+        padding-bottom: 20px;
+        @extend %text-body;
+        font-size: 16px;
+        opacity: 70%;
+        letter-spacing: 1.25px;
+      }
+    }
+  }
+
+  .features-col-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+
+    .features-col-2-header {
+      h2 {
+        padding-bottom: 20px;
+        @extend %main-heading;
+        font-size: 32px;
+        padding-left: 10%;
+      }
     }
 
-    .features-col-2 {
-        display: flex;
-        flex-direction: column;
+    .features-col-2-list {
+        padding-left: 12%;
+
+        ul {
+            li {
+                margin-bottom: 20px;
+            }
+        }
     }
+  }
 }
