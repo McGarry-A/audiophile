@@ -20,8 +20,8 @@ const Features: React.FC<Props> = ({ product }) => {
         </div>
         <div className="features-col-2-list">
           <ul>
-            {product.inTheBox.map((el) => {
-              return <li>{el}</li>;
+            {product.inTheBox.map((el, index) => {
+              return <li key={index}>{el}</li>;
             })}
           </ul>
         </div>

@@ -1,0 +1,33 @@
+@import "./ImageGallery.css";
+
+.image-gallery {
+  display: flex;
+  margin: 100px auto;
+
+  .image-gallery-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .image-gallery-col-2 {
+      width: 100%;
+    div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.image-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1.5em;
+    border-radius: 20px;
+}

@@ -56,7 +56,7 @@ const ProductDetails = () => {
     <>
       {item && <ProductSpotlight product={item} buy={true} />}
       {item && <Features product={item}/>}
-      <ImageGallery />
+      {item && <ImageGallery product={item}/>}
       {/* YOU MAY ALSO LIKE */}
       <Categories />
       <Article />
