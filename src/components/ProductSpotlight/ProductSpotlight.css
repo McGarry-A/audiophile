@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h2, .product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h4 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.product-spotlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4em 0em;
+}
+
+.product-spotlight .product-spotlight-col-1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h4 {
+  color: #d87d4a;
+  margin-bottom: 10px;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h2 {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  width: 100%;
+  opacity: 50%;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container button {
+  text-transform: uppercase;
+  padding: 0.8em 1.8em;
+  border: none;
+  color: white;
+  background-color: #d87d4a;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.product-spotlight .product-spotlight-col-1 .product-spotlight-text-container button:hover {
+  background-color: #fbaf85;
+}
+
+.product-spotlight .product-spotlight-col-2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-spotlight .product-spotlight-col-2 img {
+  width: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=ProductSpotlight.css.map */

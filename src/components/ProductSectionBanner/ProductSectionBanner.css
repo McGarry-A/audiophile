@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.product-section-banner {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.product-section-banner {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.product-section-banner {
+  height: 220px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-color: #101010;
+  font-weight: 300;
+}
+/*# sourceMappingURL=ProductSectionBanner.css.map */

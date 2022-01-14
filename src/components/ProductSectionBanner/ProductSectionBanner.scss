@@ -1,0 +1,13 @@
+@import "../../styles/styles";
+
+.product-section-banner {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: $primary-black;
+    @extend %fourth-heading;
+    font-weight: $font-extra-light;
+}

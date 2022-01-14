@@ -1,19 +1,28 @@
 import "./ProductSection.css";
+import { ProductsInterface } from "../../data";
+import ProductSectionBanner from "../../components/ProductSectionBanner/ProductSectionBanner";
+import ProductSpotlight from "../../components/ProductSpotlight/ProductSpotlight";
+import Article from "../../components/Article/Article";
+import Categories from "../../components/Categories/Categories";
+import Footer from "../../components/Footer/Footer";
 
-interface ProductsInterface {
-  sectionName: string;
-  products: [
-    {
-      new: boolean;
-      title: string;
-      description: string;
-      image: string;
-    }
-  ];
+interface props {
+  data: ProductsInterface[];
+  index: number;
+  title: string;
 }
-
-const ProductSection: React.FC<ProductsInterface[]> = () => {
-  return <div></div>;
+const ProductSection: React.FC<props> = ({ data, index, title }) => {
+  return (
+    <>
+      <ProductSectionBanner title={title} />
+      {data.map((el, index) => {
+        return <ProductSpotlight key={index} product={el} index={index} />;
+      })}
+      <Categories />
+      <Article />
+      <Footer />
+    </>
+  );
 };
 
 export default ProductSection;
