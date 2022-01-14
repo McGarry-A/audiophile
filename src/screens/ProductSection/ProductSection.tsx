@@ -1,10 +1,19 @@
-import "./ProductSection.css"
+import "./ProductSection.css";
 
 interface ProductsInterface {
-    
-}
-const ProductSection = () => {
-    return <div></div>
+  sectionName: string;
+  products: [
+    {
+      new: boolean;
+      title: string;
+      description: string;
+      image: string;
+    }
+  ];
 }
 
-export default ProductSection
+const ProductSection: React.FC<ProductsInterface[]> = () => {
+  return <div></div>;
+};
+
+export default ProductSection;

@@ -5,7 +5,7 @@ import { ReactComponent as Logo } from "./images/shared/desktop/logo.svg";
 import { ReactComponent as Cart } from "./images/shared/desktop/icon-cart.svg";
 import Home from "./screens/Home/Home";
 import "./components/Navbar/Navbar.css";
-import ProductSection from "./screens/ProductSection/ProductSection";
+// import ProductSection from "./screens/ProductSection/ProductSection";
 
 const App = () => (
   <>
@@ -43,5 +43,3 @@ const App = () => (
 );
 
 export default App;
-
-const product: Array<object> = [{}]
