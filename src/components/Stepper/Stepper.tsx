@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Stepper.css"
 
 interface Props {

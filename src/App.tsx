@@ -80,7 +80,7 @@ const App = () => {
           style={customStyles}
           contentLabel="example modal"
         >
-          <CheckoutModal closeModal={closeModal}/>
+          <CheckoutModal closeModal={closeModal} editable={true}/>
         </Modal>
       </div>
       <Routes>

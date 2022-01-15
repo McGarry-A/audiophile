@@ -1,39 +1,40 @@
 @import "../../styles/styles";
 
 .modal {
-    max-width: 400px;
-    .modal-container {
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+  max-width: 400px;
+  .modal-container {
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
 
-            h4 {
-                @extend %fourth-heading
-            }
+      h4 {
+        @extend %fourth-heading;
+      }
 
-            p {
-                opacity: 50%;
-                text-decoration: underline;
-            }
-        }
-
-        .modal-total-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-
-            .modal-total-text {
-                text-transform: uppercase;
-                opacity: 50%;
-            }
-        }
-
-        .checkout-button {
-            @include button-one;
-            width: 100%;
-            font-size: 16px;
-            letter-spacing: 1px;
-        }
+      p {
+        opacity: 50%;
+        text-decoration: underline;
+      }
     }
+
+     .modal-total-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .modal-total-text {
+        text-transform: uppercase;
+        opacity: 50%;
+      }
+    }
+
+    .checkout-button {
+      @include button-one;
+      width: 100%;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  }
 }

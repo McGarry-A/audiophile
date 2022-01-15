@@ -15,7 +15,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     findItem(findProducts());
-  }, []);
+  });
 
   const findSection = (id: string, data: SectionInterface[]): number => {
     let section: number = 0;

@@ -2,7 +2,7 @@
 .radio-button-container {
   border: 1px solid #d3d1d1;
   padding: 1.2em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 10px;
   width: 450px;
   display: -webkit-box;
@@ -38,5 +38,6 @@
 
 .radio-button-container label {
   margin-left: 10px;
+  font-weight: 600;
 }
 /*# sourceMappingURL=RadioButton.css.map */

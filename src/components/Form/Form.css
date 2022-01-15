@@ -46,7 +46,8 @@
 }
 
 .form .form-section .form-section-body .form-payment-container .form-payment-col-1 {
-  width: 875px;
+  width: 900px;
+  font-weight: 600;
 }
 
 .form .form-section .form-section-body .form-payment-container .form-payment-col-2 {

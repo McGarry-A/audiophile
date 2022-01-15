@@ -8,8 +8,8 @@ interface Props {
 const RadioButton: React.FC<Props> = (props) => {
   return (
     <div className="radio-button-container">
-      <input type="radio" id="huey" name="drone" value="huey" checked />
-      <label htmlFor="huey">Huey</label>
+      <input type="radio" id="huey" name="drone" value="huey" />
+      <label htmlFor="huey">{props.for}</label>
     </div>
   );
 };
