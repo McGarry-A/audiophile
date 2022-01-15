@@ -19,11 +19,18 @@ const Features: React.FC<Props> = ({ product }) => {
           <h2>In The Box</h2>
         </div>
         <div className="features-col-2-list">
-          <ul>
-            {product.inTheBox.map((el, index) => {
-              return <li key={index}>{el}</li>;
-            })}
-          </ul>
+          {product.inTheBox.map((el, index) => {
+            return (
+              <div key={index} className="features-in-the-box">
+                <div className="features-in-the-box-col-1">
+                  <p>{el.BoxItemNumber}x</p>
+                </div>
+                <div className="features-in-the-box-col-2">
+                  <p>{el.BoxItem}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

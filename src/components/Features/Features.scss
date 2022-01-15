@@ -43,11 +43,19 @@
     }
 
     .features-col-2-list {
-        padding-left: 12%;
+        padding-left: 10%;
 
-        ul {
-            li {
-                margin-bottom: 20px;
+        .features-in-the-box {
+            display: flex;
+
+            .features-in-the-box-col-1 {
+                margin-right: 40px;
+                margin-bottom: 10px;
+
+                p {
+                    color: $primary-brownish-orange;
+                    font-weight: $font-bold;
+                }
             }
         }
     }

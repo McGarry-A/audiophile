@@ -9,10 +9,10 @@ const ImageGallery: React.FC<props> = ({ product }) => {
   return (
     <div className="image-gallery">
       <div className="image-gallery-col-1">
-        <div>
+        <div className="image-gallery-item-1">
           <img className="image-item" src={images[0]} alt="product"/>
         </div>
-        <div>
+        <div className="image-gallery-item-2">
           <img className="image-item" src={images[1]} alt="product"/>
         </div>
       </div>

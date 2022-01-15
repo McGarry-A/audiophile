@@ -38,6 +38,11 @@ export interface SectionInterface {
   products: ProductsInterface[];
 }
 
+interface InTheBoxItem {
+  BoxItem: string;
+  BoxItemNumber: number;
+}
+
 export interface ProductsInterface {
   id: string;
   new: boolean;
@@ -47,7 +52,7 @@ export interface ProductsInterface {
   features: Array<string>;
   heroImage: string;
   images: string[];
-  inTheBox: Array<string>;
+  inTheBox: Array<InTheBoxItem>;
 }
 
 export const data: Array<SectionInterface> = [
@@ -68,7 +73,28 @@ export const data: Array<SectionInterface> = [
         ],
         heroImage: Mark2,
         images: [Mark2One, Mark2Two, Mark2Three],
-        inTheBox: ["testing", "123"],
+        inTheBox: [
+          {
+            BoxItem: "Headphone Unit",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "Replacement Cups",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "3.5mm 5m Audio Cable",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "Travel Bag",
+            BoxItemNumber: 1,
+          },
+        ],
       },
       {
         id: "h2",
@@ -83,7 +109,24 @@ export const data: Array<SectionInterface> = [
         ],
         heroImage: XX99,
         images: [XX99One, XX99Two, XX99Three],
-        inTheBox: [""],
+        inTheBox: [
+          {
+            BoxItem: "Headphone Unit",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "Replacement Cups",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "3.5mm 5m Audio Cable",
+            BoxItemNumber: 1,
+          },
+        ],
       },
       {
         id: "h3",
@@ -98,7 +141,24 @@ export const data: Array<SectionInterface> = [
         ],
         heroImage: XX59,
         images: [XX59One, XX59Two, XX59Three],
-        inTheBox: [""],
+        inTheBox: [
+          {
+            BoxItem: "Headphone Unit",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "Replacement Cups",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "3.5mm 5m Audio Cable",
+            BoxItemNumber: 1,
+          },
+        ],
       },
     ],
   },
@@ -113,13 +173,34 @@ export const data: Array<SectionInterface> = [
         price: 1499.99,
         description:
           "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
-          features: [
-            "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).",
-            "Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.",
-          ],
+        features: [
+          "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).",
+          "Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.",
+        ],
         heroImage: ZX9,
         images: [ZX9One, ZX9Two, ZX9Three],
-        inTheBox: [""],
+        inTheBox: [
+          {
+            BoxItem: "Speaker Unit",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "Speaker Cloth Panel",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "3.5mm 10m Audio Cable",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "10m Optical Cable",
+            BoxItemNumber: 1,
+          },
+        ],
       },
       {
         id: "s2",
@@ -134,7 +215,28 @@ export const data: Array<SectionInterface> = [
         ],
         heroImage: ZX7,
         images: [ZX7One, ZX7Two, ZX7Three],
-        inTheBox: [""],
+        inTheBox: [
+          {
+            BoxItem: "Speaker Unit",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "Speaker Cloth Panel",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "3.5mm 7.5m Audio Cable",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "7.5m Optical Cable",
+            BoxItemNumber: 1,
+          },
+        ],
       },
     ],
   },
@@ -155,7 +257,28 @@ export const data: Array<SectionInterface> = [
         ],
         heroImage: yx1,
         images: [yx1One, yx1Two, yx1Three],
-        inTheBox: [""],
+        inTheBox: [
+          {
+            BoxItem: "Earphone Unit",
+            BoxItemNumber: 2,
+          },
+          {
+            BoxItem: "Multi-size Earplugs",
+            BoxItemNumber: 6,
+          },
+          {
+            BoxItem: "User Manual",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "USB C Charging Cable",
+            BoxItemNumber: 1,
+          },
+          {
+            BoxItem: "Travel Pouch",
+            BoxItemNumber: 1,
+          },
+        ],
       },
     ],
   },
