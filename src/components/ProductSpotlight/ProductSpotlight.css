@@ -57,6 +57,8 @@
 .product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h4 {
   color: #d87d4a;
   margin-bottom: 10px;
+  opacity: 60%;
+  letter-spacing: 8px;
 }
 
 .product-spotlight .product-spotlight-col-1 .product-spotlight-text-container h2 {

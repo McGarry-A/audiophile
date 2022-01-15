@@ -3,8 +3,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 100px auto;
-  width: 90%;
+  margin: 100px 0;
 }
 
 .image-gallery .image-gallery-col-1 {

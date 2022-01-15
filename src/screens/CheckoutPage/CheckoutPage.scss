@@ -1,7 +1,11 @@
 @import "../../styles/styles.scss";
 
 .checkout-page {
-    // background-color: $primary-grey;
+    margin-top: 50px;
+    
+    .checkout-title {
+        margin-bottom: 50px;    
+    }
     .checkout-title {
         @extend %sub-heading;
         margin: 40px 0;

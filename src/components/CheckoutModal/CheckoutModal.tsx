@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 interface props {
   closeModal?: Function;
-  editable?: boolean;
+  editable: boolean;
 }
 const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   return (
@@ -23,7 +23,7 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
           )}
         </div>
         <div className="modal-body-container">
-          <ItemCard />
+          <ItemCard editable={editable} />
         </div>
         {editable ? (
           <div className="modal-total-container">

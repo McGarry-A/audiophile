@@ -8,6 +8,10 @@
     justify-content: center;
     color: white;
     background-color: $primary-black;
-    @extend %fourth-heading;
-    font-weight: $font-extra-light;
+    @extend %main-heading;
+    h3 {
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 5px;
+    }
 }

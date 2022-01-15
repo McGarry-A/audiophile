@@ -28,6 +28,11 @@
           justify-content: space-between;
   padding: 2em 4em;
   border-bottom: #f1f1f1;
+  z-index: 999999;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .navbar nav .nav-list {

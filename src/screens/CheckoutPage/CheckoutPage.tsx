@@ -7,7 +7,7 @@ const CheckoutPage = () => {
       <h2 className="checkout-title">Checkout</h2>
       <div className="checkout-body">
         <Form />
-        <CheckoutModal />
+        <CheckoutModal editable={false} />
       </div>
     </div>
   );

@@ -26,12 +26,17 @@
   display: -ms-flexbox;
   display: flex;
   color: white;
-  padding: 10em 0;
-  background-color: #191919;
-  height: 93vh;
+  background-color: #101010;
+  position: relative;
+  height: 1000px;
 }
 
 .hero .hero-left {
+  background-color: #101010;
+  z-index: 1;
+  margin-top: -200px;
+  height: -120%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,31 +47,28 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 10em;
-  background-color: #191919;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  padding-left: 150px;
+  padding-top: 200px;
 }
 
 .hero .hero-left .hero-new-prod {
-  opacity: 70%;
+  opacity: 50%;
   margin-bottom: 20px;
   font-weight: 300;
-  letter-spacing: 10px;
+  letter-spacing: 14px;
 }
 
 .hero .hero-left h1 {
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 .hero .hero-left .hero-text {
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 500;
-  width: 75%;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 10px;
   margin-bottom: 40px;
-  opacity: 50%;
+  opacity: 80%;
+  color: #f1f1f1;
 }
 
 .hero .hero-left button {
@@ -79,6 +81,9 @@
   height: 48px;
   font-size: 13px;
   cursor: pointer;
+  width: 220px;
+  height: 60px;
+  font-size: 18px;
 }
 
 .hero .hero-left button:hover {
@@ -86,18 +91,14 @@
 }
 
 .hero .hero-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
 }
 
 .hero .hero-right .hero-mark-two {
-  width: 100%;
+  position: absolute;
+  width: 90%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  top: 0px;
+  right: 0px;
 }
 /*# sourceMappingURL=Hero.css.map */
