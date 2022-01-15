@@ -1,0 +1,31 @@
+@import "../../styles/styles";
+
+.item-card {
+    width: 100%;
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+
+    .item-card-col-1 {
+        flex: 1.5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .item-card-col-2 {
+        flex: 3;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        p {
+            opacity: 50%;
+        }
+    } 
+}

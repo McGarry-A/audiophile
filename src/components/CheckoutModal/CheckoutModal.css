@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.modal .modal-container .modal-header h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.modal .modal-container .modal-header h4 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.modal .modal-container .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-container .modal-header p {
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+.modal .modal-container .modal-total-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.modal .modal-container .modal-total-container .modal-total-text {
+  text-transform: uppercase;
+  opacity: 50%;
+}
+
+.modal .modal-container .checkout-button {
+  text-transform: uppercase;
+  padding: 0.8em 1.8em;
+  border: none;
+  color: white;
+  background-color: #d87d4a;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.modal .modal-container .checkout-button:hover {
+  background-color: #fbaf85;
+}
+/*# sourceMappingURL=CheckoutModal.css.map */

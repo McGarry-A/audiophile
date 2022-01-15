@@ -1,0 +1,38 @@
+@import "../../styles/styles";
+
+.modal {
+    .modal-container {
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                @extend %fourth-heading
+            }
+
+            p {
+                opacity: 50%;
+                text-decoration: underline;
+            }
+        }
+
+        .modal-total-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .modal-total-text {
+                text-transform: uppercase;
+                opacity: 50%;
+            }
+        }
+
+        .checkout-button {
+            @include button-one;
+            width: 100%;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+}
