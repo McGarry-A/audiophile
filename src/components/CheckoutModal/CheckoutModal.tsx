@@ -1,6 +1,11 @@
 import ItemCard from "../ItemCard/ItemCard";
-import "./CheckoutModal.css"
-const CheckoutModal = () => {
+import "./CheckoutModal.css";
+import { NavLink } from "react-router-dom";
+
+interface props {
+  closeModal?: Function;
+}
+const CheckoutModal: React.FC<props> = ({ closeModal }) => {
   return (
     <div className="modal">
       <div className="modal-container">
@@ -9,13 +14,17 @@ const CheckoutModal = () => {
           <p>Remove all</p>
         </div>
         <div className="modal-body-container">
-            <ItemCard />
+          <ItemCard />
         </div>
         <div className="modal-total-container">
-            <p className="modal-total-text">Total</p>
-            <p>£999.99</p>
+          <p className="modal-total-text">Total</p>
+          <p>£999.99</p>
         </div>
-        <button className="checkout-button">Checkout</button>
+        <NavLink to="/checkout">
+          <button className="checkout-button" onClick={() => closeModal && closeModal()}>
+            Checkout
+          </button>
+        </NavLink>
       </div>
     </div>
   );

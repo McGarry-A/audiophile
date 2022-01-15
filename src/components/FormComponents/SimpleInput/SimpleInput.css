@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.simple-input-container {
+  margin-bottom: 20px;
+}
+
+.simple-input-container p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.simple-input-container input {
+  display: block;
+  height: 50px;
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: 2px solid #d7d6d6;
+  font-size: 16px;
+  opacity: 50%;
+  font-weight: 500;
+  min-width: 450px;
+  margin-right: 20px;
+}
+
+.simple-input-container input:focus {
+  border: 2px solid #d87d4a;
+  outline: none;
+}
+/*# sourceMappingURL=SimpleInput.css.map */

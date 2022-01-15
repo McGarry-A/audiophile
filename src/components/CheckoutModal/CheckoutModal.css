@@ -14,6 +14,10 @@
   letter-spacing: 1.3px;
 }
 
+.modal {
+  max-width: 400px;
+}
+
 .modal .modal-container .modal-header {
   display: -webkit-box;
   display: -ms-flexbox;

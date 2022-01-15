@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.radio-button-container {
+  border: 1px solid #d3d1d1;
+  padding: 1.2em;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.radio-button-container:checked {
+  border: 1px solid #d87d4a;
+}
+
+.radio-button-container input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  background-clip: content-box;
+  background-color: none;
+  border: 1px solid #cfcece;
+  border-radius: 50%;
+}
+
+.radio-button-container input:checked {
+  outline: none;
+  background-color: #d87d4a;
+}
+
+.radio-button-container label {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=RadioButton.css.map */

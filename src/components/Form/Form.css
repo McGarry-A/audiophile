@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+.form .form-section .form-section-header {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 58px;
+}
+
+.form .form-section .form-section-header {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.form {
+  width: 70%;
+  background-color: white;
+}
+
+.form .form-section {
+  width: 100%;
+}
+
+.form .form-section .form-section-header {
+  color: #d87d4a;
+  margin-bottom: 30px;
+}
+
+.form .form-section .form-section-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form .form-section .form-section-body .form-payment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.form .form-section .form-section-body .form-payment-container .form-payment-col-1 {
+  width: 875px;
+}
+
+.form .form-section .form-section-body .form-payment-container .form-payment-col-2 {
+  width: 100%;
+}
+/*# sourceMappingURL=Form.css.map */

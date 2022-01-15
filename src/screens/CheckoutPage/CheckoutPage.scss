@@ -1,0 +1,13 @@
+@import "../../styles/styles.scss";
+
+.checkout-page {
+    // background-color: $primary-grey;
+    .checkout-title {
+        @extend %sub-heading;
+        margin: 40px 0;
+    }
+
+    .checkout-body {
+        display: flex;
+    }
+}

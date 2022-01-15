@@ -10,6 +10,7 @@ import ProductDetails from "./screens/ProductDetails/ProductDetails";
 import { useState } from "react";
 import Modal from "react-modal";
 import CheckoutModal from "./components/CheckoutModal/CheckoutModal";
+import CheckoutPage from "./screens/CheckoutPage/CheckoutPage";
 
 const App = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
@@ -79,7 +80,7 @@ const App = () => {
           style={customStyles}
           contentLabel="example modal"
         >
-          <CheckoutModal />
+          <CheckoutModal closeModal={closeModal}/>
         </Modal>
       </div>
       <Routes>
@@ -94,6 +95,7 @@ const App = () => {
           );
         })}
         <Route path={`/item/:id`} element={<ProductDetails />} />
+        <Route path={`/checkout`} element={<CheckoutPage />} />
       </Routes>
     </>
   );

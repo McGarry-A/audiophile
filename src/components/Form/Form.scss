@@ -1,0 +1,35 @@
+@import "../../styles/styles.scss";
+
+.form {
+  width: 70%;
+  background-color: white;
+  
+  .form-section {
+    width: 100%;
+
+    .form-section-header {
+        color: $primary-brownish-orange;
+        margin-bottom: 30px;
+        @extend %fourth-heading;
+    }
+
+    .form-section-body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .form-payment-container {
+            display: flex;
+            width: 100%;
+            .form-payment-col-1 {
+                width: 875px;
+            }
+
+            .form-payment-col-2 {
+                width: 100%;
+            }
+        }
+    }
+  }
+}
