@@ -12,41 +12,46 @@ interface props {
 }
 
 const ProductSpotlight: React.FC<props> = ({ product, buy, index }) => {
-  
   let [count, setCount] = useState<number>(0);
-  const basketState = useContext(BasketContext)
-  let {basket, setBasket} = basketState
+  const basketState = useContext(BasketContext);
+  let { basket, setBasket } = basketState;
 
   const addToBasket = () => {
-
-    
-    const {id, name, price, heroImage} = product
-    const image = heroImage
-    let didFindItem: boolean = false
+    const { id, name, price, heroImage } = product;
+    const image = heroImage;
+    let didFindItem: boolean = false;
     // Check if that product ID is in the Array
 
     const itemToAdd: BasketInterface = {
-      name: name, 
+      name: name,
       image: image,
       price: price.toString(),
       quantity: count,
-      id: id
+      id: id,
+    };
+
+    for (let i = 0; i < basket.length; i++) {
+      if (basket[i].id === id) {
+        const newBasket = [...basket];
+        newBasket[i].quantity = newBasket[i].quantity + 1;
+        setBasket(newBasket);
+        didFindItem = true;
+      }
     }
 
-   for (let i = 0; i < basket.length; i++) {
-     if (basket[i].id === id) {
-       const newBasket = [...basket]
-       newBasket[i].quantity = newBasket[i].quantity + 1
-       setBasket(newBasket)
-       didFindItem = true
-     } 
-   }
+    if (!didFindItem) {
+      setBasket([...basket, itemToAdd]);
+    }
+    console.log(basket);
+  };
 
-   if (!didFindItem) {
-    setBasket([...basket, itemToAdd])
-   }
-    console.log(basket)
-  }
+  const changeQuantity = (operator: string) => {
+    if (operator === "add") {
+      setCount((count += 1));
+    } else if (operator === "minus") {
+      count >= 1 && setCount((count -= 1));
+    }
+  };
   return (
     <>
       <div
@@ -57,14 +62,21 @@ const ProductSpotlight: React.FC<props> = ({ product, buy, index }) => {
           <div className="product-spotlight-text-container">
             {product.new && <h4>New Product</h4>}
             <h2>{product.name}</h2>
-            <p className="product-spotlight-description">{product.description}</p>
+            <p className="product-spotlight-description">
+              {product.description}
+            </p>
 
             {buy ? (
               <div className="product-spotlight-actions-container">
                 <p className="product-spotlight-price">£{product.price}</p>
                 <div className="product-spotlight-actions">
-                  <Stepper count={count} setCount={setCount}/>
-                  <button onClick={addToBasket} className="product-spotlight-atc">Add to Cart</button>
+                  <Stepper count={count} changeQuantity={changeQuantity} />
+                  <button
+                    onClick={addToBasket}
+                    className="product-spotlight-atc"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             ) : (

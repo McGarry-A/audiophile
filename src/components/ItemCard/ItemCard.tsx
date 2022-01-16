@@ -8,10 +8,19 @@ interface props {
   el: BasketInterface
 }
 const ItemCard: React.FC<props> = ({ editable, el }) => {
-  const [count, setCount] = useState<number>(0);
-  const basketState = useContext(BasketContext)
-  const {basket, setBasket} = basketState
+
+  let [quantity, setQuantity] = useState<number>(el.quantity)
   
+  const editQuantity = (operator:string) => {
+    if (operator === "add") {
+      setQuantity(quantity += 1)
+    } else if (operator === `minus`) {
+      setQuantity(quantity -= 1)
+    }
+
+    el.quantity = quantity
+  }
+
   return (
     <div className="item-card">
       <div className="item-card-col-1">
@@ -23,10 +32,10 @@ const ItemCard: React.FC<props> = ({ editable, el }) => {
       </div>
       {editable === true ? (
         <div className="item-card-col-3">
-          <Stepper count={el.quantity} setCount={setBasket} />
+          <Stepper count={quantity} changeQuantity={editQuantity} />
         </div>
       ) : (
-        <div>x{el.quantity}</div>
+        <div>x{quantity}</div>
       )}
     </div>
   );

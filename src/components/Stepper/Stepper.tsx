@@ -2,15 +2,15 @@ import "./Stepper.css"
 
 interface Props {
     count: number,
-    setCount: Function
+    changeQuantity: Function
 }
-const Stepper: React.FC<Props> = ({count,setCount}) => {
+const Stepper: React.FC<Props> = ({count, changeQuantity}) => {
   
   return (
     <div className="stepper">
-      <button className="stepper-button" onClick={() => count >= 1 && setCount((count -= 1))}>-</button>
+      <button className="stepper-button" onClick={() => changeQuantity("minus")}>-</button>
       <p className="stepper-count">{count}</p>
-      <button className="stepper-button" onClick={() => setCount((count += 1))}>+</button>
+      <button className="stepper-button" onClick={() => changeQuantity("add")}>+</button>
     </div>
   );
 };
