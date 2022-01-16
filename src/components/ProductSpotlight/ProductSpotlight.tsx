@@ -18,15 +18,34 @@ const ProductSpotlight: React.FC<props> = ({ product, buy, index }) => {
   let {basket, setBasket} = basketState
 
   const addToBasket = () => {
-    const {name, price, heroImage} = product
+
+    
+    const {id, name, price, heroImage} = product
     const image = heroImage
+    let didFindItem: boolean = false
+    // Check if that product ID is in the Array
+
     const itemToAdd: BasketInterface = {
       name: name, 
       image: image,
       price: price.toString(),
-      quantity: count
+      quantity: count,
+      id: id
     }
+
+   for (let i = 0; i < basket.length; i++) {
+     if (basket[i].id === id) {
+       const newBasket = [...basket]
+       newBasket[i].quantity = newBasket[i].quantity + 1
+       setBasket(newBasket)
+       didFindItem = true
+     } 
+   }
+
+   if (!didFindItem) {
     setBasket([...basket, itemToAdd])
+   }
+    console.log(basket)
   }
   return (
     <>

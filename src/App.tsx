@@ -15,20 +15,7 @@ import { BasketContext, BasketInterface } from ".";
 import basketImage from "./images/product-yx1-earphones/desktop/image-product.jpg"
 const App = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
-  const [basket, setBasket] = useState<BasketInterface[]>([
-    {
-      name: "earphones",
-      image: basketImage,
-      price: "100",
-      quantity: 1,
-    },
-    {
-      name: "earphones",
-      image: basketImage,
-      price: "100",
-      quantity: 1,
-    },
-  ]);
+  const [basket, setBasket] = useState<BasketInterface[]>([]);
 
   const basketState = { basket, setBasket };
   const openModal = () => {
@@ -96,6 +83,7 @@ const App = () => {
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel="example modal"
+            ariaHideApp={false}
           >
             <CheckoutModal closeModal={closeModal} editable={true} />
           </Modal>

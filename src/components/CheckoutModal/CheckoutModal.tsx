@@ -26,25 +26,36 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
     setBasket([])
   }
 
-  // useEffect(() => {
-  //   calculateTotalPriceOfItems()
+  // const addToBasket = () => {
 
-  // }, [totalItemPrice])
+    
+  //   const {id, name, price, heroImage} = product
+  //   const image = heroImage
+  //   let didFindItem: boolean = false
+  //   // Check if that product ID is in the Array
 
-  // const calculateTotalPriceOfBasket = (
-  //   calculateTotalPriceOfItems: Function,
-  //   calculateVAT: Function
-  // ) => {
-  //   const items = +calculateTotalPriceOfItems;
-  //   const vat = +calculateVAT;
-  //   const shipping = 50;
-  //   return items + vat + shipping;
-  // };
+  //   const itemToAdd: BasketInterface = {
+  //     name: name, 
+  //     image: image,
+  //     price: price.toString(),
+  //     quantity: count,
+  //     id: id
+  //   }
 
-  // const calculateVAT = (calculateTotalPriceOfItems: Function) => {
-  //   const vat = +calculateTotalPriceOfItems.toString();
-  //   return vat;
-  // };
+  //  for (let i = 0; i < basket.length; i++) {
+  //    if (basket[i].id === id) {
+  //      const newBasket = [...basket]
+  //      newBasket[i].quantity = newBasket[i].quantity + 1
+  //      setBasket(newBasket)
+  //      didFindItem = true
+  //    } 
+  //  }
+
+  //  if (!didFindItem) {
+  //   setBasket([...basket, itemToAdd])
+  //  }
+  //   console.log(basket)
+  // }
 
   return (
     <div className="modal">

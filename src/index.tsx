@@ -9,6 +9,7 @@ export interface BasketInterface {
   price: string,
   image: string,
   quantity: number,
+  id: string
 }
 
 export interface BasketContextInterface {
