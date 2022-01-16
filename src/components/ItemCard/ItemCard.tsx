@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { BasketContext, BasketInterface } from "../..";
+import {  useState } from "react";
+import {  BasketInterface } from "../..";
 import Stepper from "../Stepper/Stepper";
 import "./ItemCard.css";
 

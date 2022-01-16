@@ -1,7 +1,7 @@
 import ItemCard from "../ItemCard/ItemCard";
 import "./CheckoutModal.css";
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { BasketContext } from "../..";
 
 interface props {
@@ -11,7 +11,6 @@ interface props {
 const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   const basketState = useContext(BasketContext);
   const { basket, setBasket } = basketState;
-  const [basketQuantity, setBasketQuantity] = useState<number>(0);
   
   const calculateTotalPriceOfItems = () => {
     let total = 0
@@ -25,37 +24,6 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   const emptyBasket = () => {
     setBasket([])
   }
-
-  // const addToBasket = () => {
-
-    
-  //   const {id, name, price, heroImage} = product
-  //   const image = heroImage
-  //   let didFindItem: boolean = false
-  //   // Check if that product ID is in the Array
-
-  //   const itemToAdd: BasketInterface = {
-  //     name: name, 
-  //     image: image,
-  //     price: price.toString(),
-  //     quantity: count,
-  //     id: id
-  //   }
-
-  //  for (let i = 0; i < basket.length; i++) {
-  //    if (basket[i].id === id) {
-  //      const newBasket = [...basket]
-  //      newBasket[i].quantity = newBasket[i].quantity + 1
-  //      setBasket(newBasket)
-  //      didFindItem = true
-  //    } 
-  //  }
-
-  //  if (!didFindItem) {
-  //   setBasket([...basket, itemToAdd])
-  //  }
-  //   console.log(basket)
-  // }
 
   return (
     <div className="modal">
