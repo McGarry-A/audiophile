@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BasketInterface } from "../..";
 import Stepper from "../Stepper/Stepper";
 import "./ItemCard.css";
-import Thumbnail from "../../images/product-xx99-mark-two-headphones/desktop/image-product.jpg";
 
 interface props {
   editable: boolean;
@@ -14,7 +13,7 @@ const ItemCard: React.FC<props> = ({ editable, el }) => {
   return (
     <div className="item-card">
       <div className="item-card-col-1">
-        <img src={Thumbnail} alt="product-thumbnail" />
+        <img src={el.image} alt="product-thumbnail" />
       </div>
       <div className="item-card-col-2">
         <h4>{el.name}</h4>
@@ -25,7 +24,7 @@ const ItemCard: React.FC<props> = ({ editable, el }) => {
           <Stepper count={count} setCount={setCount} />
         </div>
       ) : (
-        <div>{el.quantity}</div>
+        <div>x{el.quantity}</div>
       )}
     </div>
   );

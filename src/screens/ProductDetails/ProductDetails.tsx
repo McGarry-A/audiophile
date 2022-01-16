@@ -46,7 +46,6 @@ const ProductDetails = () => {
   const findItem = (products: ProductsInterface[]) => {
     products.forEach((el) => {
       if (el.id === id) {
-        console.log(el);
         setItem(el);
       }
     });

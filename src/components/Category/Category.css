@@ -80,6 +80,11 @@
   z-index: 1111;
 }
 
+.category .category-text .category-button:hover {
+  background-color: black;
+  color: white;
+}
+
 .category .category-text .category-button p:hover {
   color: #d87d4a;
   font-weight: 600;

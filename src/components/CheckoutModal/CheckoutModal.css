@@ -16,6 +16,8 @@
 
 .modal {
   max-width: 400px;
+  min-height: 300px;
+  position: relative;
 }
 
 .modal .modal-container .modal-header {
@@ -34,6 +36,7 @@
 .modal .modal-container .modal-header p {
   opacity: 50%;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .modal .modal-container .modal-total-container {

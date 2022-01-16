@@ -1,7 +1,7 @@
 import ItemCard from "../ItemCard/ItemCard";
 import "./CheckoutModal.css";
 import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BasketContext } from "../..";
 
 interface props {
@@ -12,16 +12,24 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   const basketState = useContext(BasketContext);
   const { basket, setBasket } = basketState;
   const [basketQuantity, setBasketQuantity] = useState<number>(0);
+  
+  const calculateTotalPriceOfItems = () => {
+    let total = 0
+    basket.forEach(el => {
+      total = +el.price + total
+    })
+    return total.toString()
+  }
 
-  const calculateTotalPriceOfItems = (): string => {
-    let total: number = 0;
-    basket.forEach((el) => {
-      total = total + +el.price;
-    });
-    return total.toString();
-  };
 
-  const [totalItemPrice, setTotalItemPrice] = useState<string>(calculateTotalPriceOfItems)
+  const emptyBasket = () => {
+    setBasket([])
+  }
+
+  // useEffect(() => {
+  //   calculateTotalPriceOfItems()
+
+  // }, [totalItemPrice])
 
   // const calculateTotalPriceOfBasket = (
   //   calculateTotalPriceOfItems: Function,
@@ -47,7 +55,7 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
               <h4>
                 Cart ({basket.length > 0 ? basket.length : "Basket is empty"})
               </h4>
-              <p>Remove all</p>
+              <p onClick={emptyBasket}>Remove all</p>
             </div>
           ) : (
             <div>
@@ -60,13 +68,13 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
         </div>
         <div className="modal-body-container">
           {basket.map((el, index) => {
-            return <ItemCard editable={editable} el={el} />;
+            return <ItemCard editable={editable} el={el} key={index} />;
           })}
         </div>
         {editable ? (
           <div className="modal-total-container">
             <p className="modal-total-text">Total</p>
-            <p>£{totalItemPrice}</p>
+            <p>£{calculateTotalPriceOfItems()}</p>
           </div>
         ) : (
           <>

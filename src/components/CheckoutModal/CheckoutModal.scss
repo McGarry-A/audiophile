@@ -2,6 +2,8 @@
 
 .modal {
   max-width: 400px;
+  min-height: 300px;
+  position: relative;
   .modal-container {
     .modal-header {
       display: flex;
@@ -16,6 +18,7 @@
       p {
         opacity: 50%;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
 
