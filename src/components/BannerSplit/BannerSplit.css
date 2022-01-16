@@ -73,4 +73,9 @@
 .banner-split .banner-split-right button:hover {
   background-color: #fbaf85;
 }
+
+.banner-split .banner-split-right button:hover {
+  background-color: black;
+  color: white;
+}
 /*# sourceMappingURL=BannerSplit.css.map */

@@ -13,8 +13,21 @@ import CheckoutModal from "./components/CheckoutModal/CheckoutModal";
 import CheckoutPage from "./screens/CheckoutPage/CheckoutPage";
 
 const App = () => {
-  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [basket, setBasket] = useState<BasketInterface[] | void>();
+  
+  interface BasketInterface {
+    name: string;
+    price: string;
+    image: string;
+    quantity: number;
+  }
+  
+  interface BasketContextInterface {
+    basket: BasketInterface | BasketInterface[] | void;
+    setBasket: Function;
+  }
 
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
   const openModal = () => {
     setIsOpen(true);
   };
@@ -27,7 +40,7 @@ const App = () => {
     return;
   };
 
-  Modal.defaultStyles.overlay!.backgroundColor = 'rgba(0,0,0,0.5)';
+  Modal.defaultStyles.overlay!.backgroundColor = "rgba(0,0,0,0.5)";
 
   const customStyles = {
     content: {
@@ -36,67 +49,67 @@ const App = () => {
       top: "8%",
       left: "950px",
       width: "400px",
-      height: "min-content"
+      height: "min-content",
     },
   };
 
   return (
     <>
-      <div className="navbar">
-        <div className="logo-container">
-          <Logo />
+        <div className="navbar">
+          <div className="logo-container">
+            <Logo />
+          </div>
+          <nav>
+            <ul className="nav-list">
+              <li className="nav-list-item">
+                <NavLink className="nav-list-item" to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-list-item">
+                <NavLink className="nav-list-item" to="/headphones">
+                  Headphones
+                </NavLink>
+              </li>
+              <li className="nav-list-item">
+                <NavLink className="nav-list-item" to="/speakers">
+                  Speakers
+                </NavLink>
+              </li>
+              <li className="nav-list-item">
+                <NavLink className="nav-list-item" to="/earphones">
+                  Earphones
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+          <div className="cart-container">
+            <Cart className="cart" onClick={openModal} />
+          </div>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="example modal"
+          >
+            <CheckoutModal closeModal={closeModal} editable={true} />
+          </Modal>
         </div>
-        <nav>
-          <ul className="nav-list">
-            <li className="nav-list-item">
-              <NavLink className="nav-list-item" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-list-item">
-              <NavLink className="nav-list-item" to="/headphones">
-                Headphones
-              </NavLink>
-            </li>
-            <li className="nav-list-item">
-              <NavLink className="nav-list-item" to="/speakers">
-                Speakers
-              </NavLink>
-            </li>
-            <li className="nav-list-item">
-              <NavLink className="nav-list-item" to="/earphones">
-                Earphones
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-        <div className="cart-container">
-          <Cart className="cart" onClick={openModal} />
-        </div>
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="example modal"
-        >
-          <CheckoutModal closeModal={closeModal} editable={true}/>
-        </Modal>
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {data.map((el, index) => {
-          return (
-            <Route
-              path={`/${el.name}`}
-              key={index}
-              element={<ProductSection data={el.products} title={el.name} />}
-            />
-          );
-        })}
-        <Route path={`/item/:id`} element={<ProductDetails />} />
-        <Route path={`/checkout`} element={<CheckoutPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {data.map((el, index) => {
+            return (
+              <Route
+                path={`/${el.name}`}
+                key={index}
+                element={<ProductSection data={el.products} title={el.name} />}
+              />
+            );
+          })}
+          <Route path={`/item/:id`} element={<ProductDetails />} />
+          <Route path={`/checkout`} element={<CheckoutPage />} />
+        </Routes>
     </>
   );
 };

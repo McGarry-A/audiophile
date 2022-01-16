@@ -37,6 +37,11 @@
       border: 2px solid black;
       color: black;
       font-weight: $font-bold;
+
+      &:hover {
+        background-color: black;
+        color: white;
+    }
     }
   }
 }

@@ -33,4 +33,9 @@
   cursor: pointer;
   opacity: 50%;
 }
+
+.stepper button:hover {
+  color: #d87d4a;
+  font-weight: 700;
+}
 /*# sourceMappingURL=Stepper.css.map */

@@ -52,6 +52,10 @@
   text-decoration: none;
 }
 
+.navbar nav .nav-list .nav-list-item:hover {
+  color: #d87d4a;
+}
+
 .navbar .cart-container .cart {
   cursor: pointer;
 }

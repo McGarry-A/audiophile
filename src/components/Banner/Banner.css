@@ -27,7 +27,7 @@
   color: white;
   overflow: hidden;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 }
 
 .banner .banner-left {
@@ -81,6 +81,11 @@
   color: white;
   font-weight: 600;
   letter-spacing: 1.3px;
+  cursor: pointer;
+}
+
+.banner .banner-right button:hover {
+  background-color: #fbaf85;
 }
 
 .banner .banner-right button:hover {

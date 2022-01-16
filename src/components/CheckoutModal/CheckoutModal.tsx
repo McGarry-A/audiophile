@@ -7,7 +7,9 @@ interface props {
   editable: boolean;
 }
 const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
+
   return (
+    
     <div className="modal">
       <div className="modal-container">
         <div className="modal-header">

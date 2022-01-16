@@ -67,6 +67,10 @@
                     font-size: 14px;
                     padding-left: 40px;
                     cursor: pointer;
+
+                    &:hover {
+                        color: $primary-brownish-orange;
+                    }
                 }
             }
         }

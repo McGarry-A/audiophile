@@ -41,6 +41,11 @@ $secondary-black: #191919;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 
 // Text templates

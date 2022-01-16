@@ -61,6 +61,11 @@
   background-color: #fbaf85;
 }
 
+.banner-short .banner-short-left button:hover {
+  background-color: black;
+  color: white;
+}
+
 .banner-short .banner-short-right .banner-right-image {
   width: 100%;
   -o-object-fit: cover;

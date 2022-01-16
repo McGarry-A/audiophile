@@ -1,9 +1,10 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import RadioButton from "../FormComponents/RadioButton/RadioButton";
 import SimpleInput from "../FormComponents/SimpleInput/SimpleInput";
 import "./Form.css";
 
 const Form: React.FC = (): ReactElement => {
+
   return (
     <div className="form">
       <div className="form-section">

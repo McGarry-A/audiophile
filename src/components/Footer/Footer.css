@@ -114,6 +114,10 @@
   cursor: pointer;
 }
 
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-item:hover {
+  color: #d87d4a;
+}
+
 .footer .footer-col-2 .footer-socials-container {
   height: 100%;
   display: -webkit-box;

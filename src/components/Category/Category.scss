@@ -10,6 +10,7 @@
         object-fit: cover;
         width: 60%;
         margin: 0;
+        z-index: 1;
     }
 
     .category-text {
@@ -23,7 +24,6 @@
         height: 240px;
         border-radius: 8px;
         margin-top: -150px;
-        z-index: -1;
 
         .category-name {
             @extend %fourth-heading;
@@ -37,6 +37,18 @@
             justify-content: space-between;
             margin: 0 auto;
             cursor: pointer;
+            z-index: 1111;
+            
+            p {
+                &:hover {
+                    color: $primary-brownish-orange;
+                    font-weight: $font-bold;
+                }
+            }            
+        }
+        .category-link {
+            text-decoration: none;
+
         }
     }
 }

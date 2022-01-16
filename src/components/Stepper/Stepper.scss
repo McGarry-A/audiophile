@@ -21,5 +21,10 @@
         border: none;
         cursor: pointer;
         opacity: 50%;
+
+        &:hover {
+            color: $primary-brownish-orange;
+            font-weight: $font-extra-bold;
+        }
     }
 }

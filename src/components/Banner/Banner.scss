@@ -10,7 +10,7 @@
     color: white;
     overflow: hidden;
     position: relative;
-    z-index: -2;
+    z-index: 0;
 
     .banner-left {
         width: 100%;
@@ -49,6 +49,10 @@
             color: white;
             font-weight: $font-bold;
             letter-spacing: 1.3px;
+            cursor: pointer;
+            &:hover {
+                background-color: $secondary-light-brown;
+            }
         }
 
         .circle {
