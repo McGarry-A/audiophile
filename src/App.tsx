@@ -11,23 +11,26 @@ import { useState } from "react";
 import Modal from "react-modal";
 import CheckoutModal from "./components/CheckoutModal/CheckoutModal";
 import CheckoutPage from "./screens/CheckoutPage/CheckoutPage";
-
+import { BasketContext, BasketInterface } from ".";
+import basketImage from "./images/product-yx1-earphones/desktop/image-product.jpg"
 const App = () => {
-  const [basket, setBasket] = useState<BasketInterface[] | void>();
-  
-  interface BasketInterface {
-    name: string;
-    price: string;
-    image: string;
-    quantity: number;
-  }
-  
-  interface BasketContextInterface {
-    basket: BasketInterface | BasketInterface[] | void;
-    setBasket: Function;
-  }
-
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [basket, setBasket] = useState<BasketInterface[]>([
+    {
+      name: "earphones",
+      image: basketImage,
+      price: "100",
+      quantity: 1,
+    },
+    {
+      name: "earphones",
+      image: basketImage,
+      price: "100",
+      quantity: 1,
+    },
+  ]);
+
+  const basketState = { basket, setBasket };
   const openModal = () => {
     setIsOpen(true);
   };
@@ -55,6 +58,7 @@ const App = () => {
 
   return (
     <>
+      <BasketContext.Provider value={basketState}>
         <div className="navbar">
           <div className="logo-container">
             <Logo />
@@ -110,6 +114,7 @@ const App = () => {
           <Route path={`/item/:id`} element={<ProductDetails />} />
           <Route path={`/checkout`} element={<CheckoutPage />} />
         </Routes>
+      </BasketContext.Provider>
     </>
   );
 };
