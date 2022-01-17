@@ -12,7 +12,6 @@ import Modal from "react-modal";
 import CheckoutModal from "./components/CheckoutModal/CheckoutModal";
 import CheckoutPage from "./screens/CheckoutPage/CheckoutPage";
 import { BasketContext, BasketInterface } from ".";
-import ScrollToTop from "./utils/ScrollToTop";
 
 const App = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
