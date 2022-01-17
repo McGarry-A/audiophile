@@ -59,4 +59,8 @@
 .navbar .cart-container .cart {
   cursor: pointer;
 }
+
+.navbar .cart-container .cart:hover {
+  fill: #d87d4a;
+}
 /*# sourceMappingURL=Navbar.css.map */

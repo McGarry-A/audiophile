@@ -44,9 +44,6 @@ const Footer: React.FC = () => {
             <li className="footer-socials-item">
               <Instagram className="social-link" />
             </li>
-            {/* <Facebook />
-            <Instagram />
-            <Twitter /> */}
           </ul>
         </div>
       </div>

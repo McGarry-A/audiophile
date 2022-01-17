@@ -64,10 +64,6 @@
 }
 
 .category .category-text .category-button {
-  text-transform: uppercase;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,14 +74,12 @@
   margin: 0 auto;
   cursor: pointer;
   z-index: 1111;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
 }
 
-.category .category-text .category-button:hover {
-  background-color: black;
-  color: white;
-}
-
-.category .category-text .category-button p:hover {
+.category .category-text .category-button .category-link-to-shop:hover {
   color: #d87d4a;
   font-weight: 600;
 }

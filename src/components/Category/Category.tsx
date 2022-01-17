@@ -21,7 +21,7 @@ const Category: React.FC<props> = ({ name, image }) => {
         <h3 className="category-name">{name}</h3>
         <NavLink to={`/${lowercaseName(name)}`} className="category-link">
           <button className="category-button">
-            <p >Shop</p>
+            <p className="category-link-to-shop">Shop</p>
             <img src={ArrowRight} alt="arrow-right" />
           </button>
         </NavLink>

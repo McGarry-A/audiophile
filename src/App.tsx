@@ -75,7 +75,7 @@ const App = () => {
             </ul>
           </nav>
           <div className="cart-container">
-            <Cart className="cart" onClick={openModal} />
+            <Cart className="cart" onClick={openModal} fill="white"/>
           </div>
           <Modal
             isOpen={modalIsOpen}

@@ -31,15 +31,17 @@
             padding-top: 100px;
         }
         .category-button {
-            @include button-two;
             display: flex;
             width: 60px;
             justify-content: space-between;
             margin: 0 auto;
             cursor: pointer;
             z-index: 1111;
+            text-transform: uppercase;
+            border: none;
+            background-color: transparent;
             
-            p {
+            .category-link-to-shop {
                 &:hover {
                     color: $primary-brownish-orange;
                     font-weight: $font-bold;
