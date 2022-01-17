@@ -1,8 +1,14 @@
 import "./CheckedOut.css";
 import { ImCheckmark } from "react-icons/im";
 import { NavLink } from "react-router-dom";
+import React from "react";
 
-const CheckedOut = () => {
+interface props {
+    checkoutComplete: boolean,
+    setCheckoutComplete: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const CheckedOut: React.FC<props> = (props) => {
   return (
     <div className="checked-out-wrapper">
       <div className="checked-out-modal">
@@ -19,7 +25,7 @@ const CheckedOut = () => {
 
         </div>
         <NavLink to={"/"}>
-          <button>Back to Home</button>
+          <button onClick={() => props.setCheckoutComplete(true)}>Back to Home</button>
         </NavLink>
       </div>
     </div>

@@ -7,8 +7,10 @@ import { BasketContext } from "../..";
 interface props {
   closeModal?: Function;
   editable: boolean;
+  setCheckoutComplete?: React.Dispatch<React.SetStateAction<boolean>>
+  checkoutComplete?: boolean
 }
-const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
+const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutComplete, checkoutComplete }) => {
   const basketState = useContext(BasketContext);
   const { basket, setBasket } = basketState;
 
@@ -16,6 +18,12 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   const [vat, setVat] = useState<string>("");
   const [grandPrice, setGrandPrice] = useState<string>("");
 
+  const checkoutButtonHandler = () => {
+    closeModal && closeModal()
+    setCheckoutComplete!(true)
+
+    setBasket([])
+  }
   const emptyBasket = () => {
     setBasket([]);
   };
@@ -110,7 +118,7 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
         <NavLink to="/checkout">
           <button
             className="checkout-button"
-            onClick={() => closeModal && closeModal()}
+            onClick={checkoutButtonHandler}
           >
             Checkout
           </button>
