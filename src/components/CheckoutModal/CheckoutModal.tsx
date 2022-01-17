@@ -1,7 +1,7 @@
 import ItemCard from "../ItemCard/ItemCard";
 import "./CheckoutModal.css";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BasketContext } from "../..";
 
 interface props {
@@ -11,20 +11,44 @@ interface props {
 const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
   const basketState = useContext(BasketContext);
   const { basket, setBasket } = basketState;
-  
-  const calculateTotalPriceOfItems = () => {
-    let total = 0
-    basket.forEach(el => {
-      total = +el.price + total
-    })
-    return total.toString()
-  }
 
+  const [totalPrice, setTotalPrice] = useState<string>("");
+  const [vat, setVat] = useState<string>("");
+  const [grandPrice, setGrandPrice] = useState<string>("");
 
   const emptyBasket = () => {
-    setBasket([])
-  }
+    setBasket([]);
+  };
 
+  const calculateTotalPriceOfItems = ():string => {
+    let runningTotal = 0;
+    basket.forEach((el) => {
+      let total = +el.price * el.quantity;
+      runningTotal = runningTotal + total;
+    });
+    runningTotal = +runningTotal.toFixed(2);
+    setTotalPrice(runningTotal.toString());
+    return totalPrice
+  };
+
+  const calculateVAT = (price: string):string => {
+    let basketVat: number | string = +price * 0.2;
+    setVat(basketVat.toFixed(2).toString());
+    return vat
+  };
+
+  const calculateGrandPrice = (totalPrice: string, Vat: string) => {
+    let grandTotal: string | number = +totalPrice + +Vat + 50
+    grandTotal = grandTotal.toFixed(2).toString()
+    setGrandPrice(grandTotal)
+  };
+
+  useEffect(() => {
+    calculateTotalPriceOfItems()
+    calculateVAT(totalPrice)
+    calculateGrandPrice(totalPrice, vat)
+  }, [vat, totalPrice, grandPrice])
+  
   return (
     <div className="modal">
       <div className="modal-container">
@@ -47,19 +71,26 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
         </div>
         <div className="modal-body-container">
           {basket.map((el, index) => {
-            return <ItemCard editable={editable} el={el} key={index} />;
+            return (
+              <ItemCard
+                editable={editable}
+                el={el}
+                key={index}
+                calculateTotalPriceOfItems={calculateTotalPriceOfItems}
+              />
+            );
           })}
         </div>
         {editable ? (
           <div className="modal-total-container">
             <p className="modal-total-text">Total</p>
-            <p>£{calculateTotalPriceOfItems()}</p>
+            <p>£{totalPrice}</p>
           </div>
         ) : (
           <>
             <div className="modal-total-container">
               <p className="modal-total-text">Total</p>
-              <p>TOTAL PRICE OF ITEMS</p>
+              <p>£{totalPrice}</p>
             </div>
             <div className="modal-total-container">
               <p className="modal-total-text">Shipping</p>
@@ -67,11 +98,11 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable }) => {
             </div>
             <div className="modal-total-container">
               <p className="modal-total-text">VAT</p>
-              <p>£ TOTAL PRICE OF VAT</p>
+              <p>£{vat}</p>
             </div>
             <div className="modal-total-container">
               <p className="modal-total-text">Grand Total</p>
-              <p>£ TOTAL PRICE OF BASKET</p>
+              <p>£{grandPrice}</p>
             </div>
           </>
         )}

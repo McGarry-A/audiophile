@@ -5,9 +5,10 @@ import "./ItemCard.css";
 
 interface props {
   editable: boolean;
-  el: BasketInterface
+  el: BasketInterface;
+  calculateTotalPriceOfItems?: Function
 }
-const ItemCard: React.FC<props> = ({ editable, el }) => {
+const ItemCard: React.FC<props> = ({ editable, el, calculateTotalPriceOfItems }) => {
 
   let [quantity, setQuantity] = useState<number>(el.quantity)
   
@@ -32,7 +33,7 @@ const ItemCard: React.FC<props> = ({ editable, el }) => {
       </div>
       {editable === true ? (
         <div className="item-card-col-3">
-          <Stepper count={quantity} changeQuantity={editQuantity} />
+          <Stepper count={quantity} changeQuantity={editQuantity} calculateTotalPriceOfItems={calculateTotalPriceOfItems} />
         </div>
       ) : (
         <div>x{quantity}</div>
