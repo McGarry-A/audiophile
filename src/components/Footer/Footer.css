@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
-.footer .footer-col-2 nav .footer-nav-list .footer-nav-item {
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-link .footer-nav-item {
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -8,7 +8,7 @@
   line-height: 58px;
 }
 
-.footer .footer-col-2 nav .footer-nav-list .footer-nav-item {
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-link .footer-nav-item {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1.3px;
@@ -106,7 +106,12 @@
           align-items: center;
 }
 
-.footer .footer-col-2 nav .footer-nav-list .footer-nav-item {
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-link .footer-nav-item {
   margin: 0 1em 0 0;
   font-weight: 400;
   font-size: 14px;
@@ -114,7 +119,7 @@
   cursor: pointer;
 }
 
-.footer .footer-col-2 nav .footer-nav-list .footer-nav-item:hover {
+.footer .footer-col-2 nav .footer-nav-list .footer-nav-link .footer-nav-item:hover {
   color: #d87d4a;
 }
 

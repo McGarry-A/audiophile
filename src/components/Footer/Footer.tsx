@@ -1,9 +1,9 @@
 import "./Footer.css";
 import Logo from "../../images/shared/desktop/logo.svg";
-import { ReactComponent as Facebook } from "../../images/shared/desktop/icon-facebook.svg"
-import { ReactComponent as Instagram } from  "../../images/shared/desktop/icon-instagram.svg"
-import { ReactComponent as Twitter } from  "../../images/shared/desktop/icon-twitter.svg"
-
+import { ReactComponent as Facebook } from "../../images/shared/desktop/icon-facebook.svg";
+import { ReactComponent as Instagram } from "../../images/shared/desktop/icon-instagram.svg";
+import { ReactComponent as Twitter } from "../../images/shared/desktop/icon-twitter.svg";
+import { NavLink } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <div className="footer">
@@ -26,10 +26,18 @@ const Footer: React.FC = () => {
       <div className="footer-col-2">
         <nav>
           <ul className="footer-nav-list">
-            <li className="footer-nav-item">Home</li>
-            <li className="footer-nav-item">Headphones</li>
-            <li className="footer-nav-item">Speakers</li>
-            <li className="footer-nav-item">Earphones</li>
+            <NavLink to={"/"} className="footer-nav-link">
+              <li className="footer-nav-item">Home</li>
+            </NavLink>
+            <NavLink to={"/headphones"} className="footer-nav-link">
+              <li className="footer-nav-item">Headphones</li>
+            </NavLink>
+            <NavLink to={"/speakers"} className="footer-nav-link">
+              <li className="footer-nav-item">Speakers</li>
+            </NavLink>
+            <NavLink to={"/earphones"} className="footer-nav-link">
+              <li className="footer-nav-item">Earphones</li>
+            </NavLink>
           </ul>
         </nav>
 
