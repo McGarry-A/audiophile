@@ -19,10 +19,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 100%;
   background-color: #d87d4a;
   height: 550px;
-  margin: 0 auto;
   border-radius: 10px;
   color: white;
   overflow: hidden;

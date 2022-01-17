@@ -2,8 +2,9 @@
 
 .product-spotlight {
   display: flex;
-  padding: 4em 0em;
+  margin: 50px 0;
   width: 100%;
+  justify-content: space-between;
 
   .product-spotlight-col-1 {
     width: 100%;

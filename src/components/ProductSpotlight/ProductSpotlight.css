@@ -31,8 +31,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 4em 0em;
+  margin: 50px 0;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .product-spotlight .product-spotlight-col-1 {
