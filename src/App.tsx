@@ -12,7 +12,8 @@ import Modal from "react-modal";
 import CheckoutModal from "./components/CheckoutModal/CheckoutModal";
 import CheckoutPage from "./screens/CheckoutPage/CheckoutPage";
 import { BasketContext, BasketInterface } from ".";
-import basketImage from "./images/product-yx1-earphones/desktop/image-product.jpg"
+import ScrollToTop from "./utils/ScrollToTop";
+
 const App = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
   const [basket, setBasket] = useState<BasketInterface[]>([]);

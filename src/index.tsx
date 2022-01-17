@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom"
+import ScrollToTop from './utils/ScrollToTop';
 
 export interface BasketInterface {
   name: string, 
@@ -25,6 +26,7 @@ export const BasketContext = createContext<BasketContextInterface>({
 
 ReactDOM.render(
   <BrowserRouter>
+  <ScrollToTop />
     <App />
   </BrowserRouter>,
   document.getElementById('root')
