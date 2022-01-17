@@ -145,4 +145,8 @@
   margin: 0 0 0 1em;
   cursor: pointer;
 }
+
+.footer .footer-col-2 .footer-socials-container .footer-socials-list .footer-socials-item .social-link:hover {
+  color: #d87d4a;
+}
 /*# sourceMappingURL=Footer.css.map */

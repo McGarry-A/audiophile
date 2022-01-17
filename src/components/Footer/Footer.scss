@@ -90,6 +90,12 @@
                 .footer-socials-item {
                     margin: 0 0 0 1em;
                     cursor: pointer;
+
+                    .social-link {
+                        &:hover {
+                            color: $primary-brownish-orange;
+                        }
+                    }
                 }
             }
         }
