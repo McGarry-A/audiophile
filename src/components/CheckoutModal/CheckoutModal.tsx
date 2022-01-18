@@ -20,9 +20,10 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutCompl
 
   const checkoutButtonHandler = () => {
     closeModal && closeModal()
-    setCheckoutComplete!(true)
-
-    setBasket([])
+    if (setCheckoutComplete) {
+      setCheckoutComplete(true)
+      setBasket([])
+    }
   }
   const emptyBasket = () => {
     setBasket([]);
