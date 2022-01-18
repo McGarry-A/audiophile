@@ -3,7 +3,20 @@
   margin-bottom: 20px;
 }
 
-.simple-input-container p {
+.simple-input-container .simple-input-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.simple-input-container .simple-input-header p {
   font-weight: 600;
   margin-bottom: 10px;
 }

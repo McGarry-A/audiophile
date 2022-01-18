@@ -1,11 +1,18 @@
 @import "../../../styles/styles";
 
 .simple-input-container {
-    p {
-        font-weight: $font-bold;
-        margin-bottom: 10px;
-    }
 
+    .simple-input-header {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+        align-items: center;
+        p {
+            font-weight: $font-bold;
+            margin-bottom: 10px;
+        }
+    }
+        
     input {
         display: block;
 
