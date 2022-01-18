@@ -12,7 +12,7 @@ interface props {
 }
 
 const ProductSpotlight: React.FC<props> = ({ product, buy, index }) => {
-  let [count, setCount] = useState<number>(0);
+  let [count, setCount] = useState<number>(1);
   const basketState = useContext(BasketContext);
   let { basket, setBasket } = basketState;
 
