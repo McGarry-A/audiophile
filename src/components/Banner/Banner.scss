@@ -52,6 +52,10 @@
             &:hover {
                 background-color: $secondary-light-brown;
             }
+            .banner-nav-link {
+                color: white;
+                text-decoration: none;
+            }
         }
 
         .circle {

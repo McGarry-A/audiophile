@@ -1,5 +1,6 @@
+import { NavLink } from "react-router-dom";
 import YX1 from "../../images/home/desktop/image-earphones-yx1.jpg";
-import "./BannerSplit.css"
+import "./BannerSplit.css";
 
 const BannerSplit: React.FC = () => {
   return (
@@ -9,7 +10,9 @@ const BannerSplit: React.FC = () => {
       </div>
       <div className="banner-split-right">
         <h2>YX1 Earphones</h2>
-        <button>See Product</button>
+        <NavLink className="banner-split-nav" to="item/e1">
+          <button>See Product</button>
+        </NavLink>
       </div>
     </div>
   );

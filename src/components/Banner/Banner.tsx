@@ -1,5 +1,6 @@
 import "./Banner.css";
-import ZX9 from "../../images/home/desktop/image-speaker-zx9.png"
+import ZX9 from "../../images/home/desktop/image-speaker-zx9.png";
+import { NavLink } from "react-router-dom";
 
 const Banner: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const Banner: React.FC = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <button>See Product</button>
+        <button>
+          <NavLink className="banner-nav-link" to="/item/s1">See Product</NavLink>
+        </button>
         <div className="circle circle-small"></div>
         <div className="circle circle-medium"></div>
         <div className="circle circle-large"></div>

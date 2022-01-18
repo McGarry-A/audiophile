@@ -66,6 +66,11 @@
   color: white;
 }
 
+.banner-short .banner-short-left button .banner-short-nav-link {
+  color: black;
+  text-decoration: none;
+}
+
 .banner-short .banner-short-right .banner-right-image {
   width: 100%;
   -o-object-fit: cover;

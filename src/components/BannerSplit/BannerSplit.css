@@ -55,7 +55,7 @@
   margin-bottom: 40px;
 }
 
-.banner-split .banner-split-right button {
+.banner-split .banner-split-right .banner-split-nav button {
   text-transform: uppercase;
   padding: 0.8em 1.8em;
   border: none;
@@ -71,11 +71,11 @@
   font-weight: 600;
 }
 
-.banner-split .banner-split-right button:hover {
+.banner-split .banner-split-right .banner-split-nav button:hover {
   background-color: #fbaf85;
 }
 
-.banner-split .banner-split-right button:hover {
+.banner-split .banner-split-right .banner-split-nav button:hover {
   background-color: black;
   color: white;
 }

@@ -91,6 +91,11 @@
   background-color: #fbaf85;
 }
 
+.banner .banner-right button .banner-nav-link {
+  color: white;
+  text-decoration: none;
+}
+
 .banner .banner-right .circle {
   background-color: transparent;
   border-radius: 50%;

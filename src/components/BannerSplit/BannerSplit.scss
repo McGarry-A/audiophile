@@ -32,17 +32,19 @@
       margin-bottom: 40px;
     }
 
-    button {
-      @include button-one;
-      background-color: transparent;
-      border: 2px solid black;
-      color: black;
-      font-weight: $font-bold;
+    .banner-split-nav {
+      button {
+        @include button-one;
+        background-color: transparent;
+        border: 2px solid black;
+        color: black;
+        font-weight: $font-bold;
 
-      &:hover {
-        background-color: black;
-        color: white;
-    }
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
     }
   }
 }
