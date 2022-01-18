@@ -28,7 +28,7 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutCompl
     setBasket([]);
   };
 
-  const calculateTotalPriceOfItems = ():string => {
+  const calculateTotalPriceOfItems = ():void => {
     let runningTotal = 0;
     basket.forEach((el) => {
       let total = +el.price * el.quantity;
@@ -36,13 +36,13 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutCompl
     });
     runningTotal = +runningTotal.toFixed(2);
     setTotalPrice(runningTotal.toString());
-    return totalPrice
+    return
   };
 
-  const calculateVAT = (price: string):string => {
+  const calculateVAT = (price: string):void => {
     let basketVat: number | string = +price * 0.2;
     setVat(basketVat.toFixed(2).toString());
-    return vat
+    return
   };
 
   const calculateGrandPrice = (totalPrice: string, Vat: string) => {
