@@ -53,7 +53,7 @@ const App = () => {
           <nav>
             <ul className="nav-list">
               <li className="nav-list-item">
-                <NavLink className="nav-list-item" to="/audiophile">
+                <NavLink className="nav-list-item" to="/audiophile/">
                   Home
                 </NavLink>
               </li>
@@ -89,7 +89,7 @@ const App = () => {
           </Modal>
         </div>
         <Routes>
-          <Route path="/audiophile" element={<Home />} />
+          <Route path="/audiophile/" element={<Home />} />
           {data.map((el, index) => {
             return (
               <Route

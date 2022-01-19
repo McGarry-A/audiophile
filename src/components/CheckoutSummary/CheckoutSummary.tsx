@@ -13,7 +13,8 @@ const CheckoutSummary = () => {
         const itemPrice:number = +el.price * +el.quantity
         total = itemPrice + total
       })
-      return total
+    
+      return Number(total.toFixed(2))
   }
 
   console.log(basket);
