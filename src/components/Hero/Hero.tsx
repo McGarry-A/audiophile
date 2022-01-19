@@ -1,5 +1,6 @@
 import "./Hero.css";
-import MarkTwo from "../../images/home/desktop/image-hero.jpg"
+import MarkTwo from "../../images/home/desktop/image-hero.jpg";
+import { NavLink } from "react-router-dom";
 const Hero: React.FC = () => {
   return (
     <div className="hero">
@@ -10,10 +11,12 @@ const Hero: React.FC = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button>See Product</button>
+        <NavLink to="/item/h1" className="hero-nav-link">
+          <button>See Product</button>
+        </NavLink>
       </div>
       <div className="hero-right">
-          <img src={MarkTwo} alt="mark-two" className="hero-mark-two"/>
+        <img src={MarkTwo} alt="mark-two" className="hero-mark-two" />
       </div>
     </div>
   );

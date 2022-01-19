@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="footer-col-2">
         <nav>
           <ul className="footer-nav-list">
-            <NavLink to={"/"} className="footer-nav-link">
+            <NavLink to={"/audiophile"} className="footer-nav-link">
               <li className="footer-nav-item">Home</li>
             </NavLink>
             <NavLink to={"/headphones"} className="footer-nav-link">

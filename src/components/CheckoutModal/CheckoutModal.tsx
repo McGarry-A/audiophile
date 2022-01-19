@@ -115,7 +115,7 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutCompl
           </>
         )}
 
-        <NavLink to={basket.length >= 1 ? "/checkout" : "/"}>
+        <NavLink to={basket.length >= 1 ? "/checkout" : "/audiophile"}>
           <button
             className="checkout-button"
             onClick={checkoutButtonHandler}
