@@ -25,7 +25,7 @@ const CheckedOut: React.FC<props> = (props) => {
         <div className="checked-out-item-list">
           <CheckoutSummary />
         </div>
-        <NavLink to={"/"}>
+        <NavLink to={"/audiophile"}>
           <button onClick={() => props.setCheckoutComplete(true)}>Back to Home</button>
         </NavLink>
       </div>
