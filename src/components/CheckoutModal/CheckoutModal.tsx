@@ -22,7 +22,6 @@ const CheckoutModal: React.FC<props> = ({ closeModal, editable, setCheckoutCompl
     closeModal && closeModal()
     if (setCheckoutComplete && basket.length >= 1) {
       setCheckoutComplete(true)
-      setBasket([])
     }
   }
   const emptyBasket = () => {

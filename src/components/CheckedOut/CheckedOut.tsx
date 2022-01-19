@@ -2,6 +2,7 @@ import "./CheckedOut.css";
 import { ImCheckmark } from "react-icons/im";
 import { NavLink } from "react-router-dom";
 import React from "react";
+import CheckoutSummary from "../CheckoutSummary/CheckoutSummary";
 
 interface props {
     checkoutComplete: boolean,
@@ -22,7 +23,7 @@ const CheckedOut: React.FC<props> = (props) => {
           </p>
         </div>
         <div className="checked-out-item-list">
-
+          <CheckoutSummary />
         </div>
         <NavLink to={"/"}>
           <button onClick={() => props.setCheckoutComplete(true)}>Back to Home</button>

@@ -34,8 +34,7 @@
 }
 
 .checked-out-wrapper .checked-out-modal {
-  height: 350px;
-  width: 450px;
+  width: 550px;
   background-color: white;
   top: 30%;
   left: 50%;
